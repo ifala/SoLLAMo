@@ -8,17 +8,21 @@ ECHO_dx = 24
 LED_sx = 3
 TRIG_sx = 14
 ECHO_sx = 15
-LED_sx = 2
+LED_dx = 2
+
 
 GPIO.setup(LED, GPIO.OUT)
 GPIO.setup(TRIG, GPIO.OUT)  # Set pin as GPIO out
 GPIO.setup(ECHO, GPIO.IN)  # Set pin as GPIO in
 
+class
 
 def sensore_dist_dx():
     global ECHO_dx
     global LED_dx
     global TRIG_dx
+    global pulse_end
+    global pulse_start
 
     print ("Distance Measurement In Progress")
 
@@ -46,6 +50,8 @@ def sensore_dist_sx():
     global ECHO_sx
     global LED_sx
     global TRIG_sx
+    global pulse_end
+    global pulse_start
     #	global distance
 
     print ("Distance Measurement In Progress")
