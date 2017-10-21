@@ -13,7 +13,8 @@ try:
         luce = rc_time(pin_to_circuit)
         distance = ultrasonic_distance_sensor_high_dx.measure()
         print ("Distance : %.1f cm" % distance)
-        print ("  Light value :  " + str(luce))
+        print ("Light value :  " + str(luce))
+        print (" ")
         time.sleep(0.5)
 finally:
     GPIO.cleanup()
