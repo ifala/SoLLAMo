@@ -8,4 +8,4 @@ from sensor.distance import ultrasonic_distance_sensor_high_dx
 from sensor.photosensor import rc_time
 
 print ultrasonic_distance_sensor_high_dx.distance
-print rc_time(7)
+print rc_time
