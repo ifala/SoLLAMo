@@ -45,6 +45,7 @@ class ultrasonic_distance_sensor:
     def get_is_string(self):
         return self.is_string
 
+
 # referring to the pins by GPIO numbers
 GPIO.setmode(GPIO.BCM)
 
