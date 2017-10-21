@@ -43,9 +43,9 @@ for i in range(0, 500):
 bit_count = 0
 tmp = 0
 count = 0
-HumidityBit = ""
-TemperatureBit = ""
-crc = ""
+HumidityBit = "1"
+TemperatureBit = "1"
+crc = "1"
 
 try:
     while data[count] == 1:
