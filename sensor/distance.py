@@ -31,6 +31,9 @@ class ultrasonic_distance_sensor:
         elapsed = stop-start
         self.distance = (elapsed * 34300)/2  # si suppone che la funzione di calcolo distanza sia giusta
 
+        if self.distance>150.0 :
+            self.distance = "Too far"
+
         return self.distance
 
 
@@ -39,12 +42,12 @@ GPIO.setmode(GPIO.BCM)
 
 
 ultrasonic_distance_sensor_high_dx = ultrasonic_distance_sensor(23, 24)
-# todo 0aggiungere altri 3 sensori di distanza ultrasonica
+# todo aggiungere altri 3 sensori di distanza ultrasonica
 
 try:
     while True:
         distance = ultrasonic_distance_sensor_high_dx.measure()
-        print "Distance : %.1f cm" % distance
+        print ("Distance : %.1f cm" % distance)
         # send data to the host every 0.5 sec
         time.sleep(0.5)
 finally:
