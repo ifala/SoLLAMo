@@ -5,22 +5,39 @@
 # Must be used with GPIO 0.3.1a or later - earlier verions
 # are not fast enough!
 
-import RPi.GPIO as GPIO, time, os
+import RPi.GPIO as GPIO
+import time
 
-DEBUG = 1
-GPIO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BOARD)
 
-def rctime(RCpin):
-        reading = 0
-        GPIO.setup(RCpin, GPIO.OUT)
-        GPIO.output(RCpin, GPIO.LOW)
+#define the pin that goes to the circuit
+pin_to_circuit = 7
+
+
+def rc_time(pin_to_circuit):
+        count = 0
+
+        # Output on the pin for
+        GPIO.setup(pin_to_circuit, GPIO.OUT)
+        GPIO.output(pin_to_circuit, GPIO.LOW)
         time.sleep(0.1)
 
-        GPIO.setup(RCpin, GPIO.IN)
-        # This takes about 1 millisecond per loop cycle
-        while (GPIO.input(RCpin) == GPIO.LOW):
-                reading += 1
-        return reading
+        # Change the pin back to input
+        GPIO.setup(pin_to_circuit, GPIO.IN)
 
-while True:
-        print rctime(18)     # Read RC timing using pin #18
+        # Count until the pin goes high
+        while (GPIO.input(pin_to_circuit) == GPIO.LOW):
+                count += 1
+
+        return count
+
+
+# Catch when script is interrupted, cleanup correctly
+try:
+        # Main loop
+        while True:
+                print rc_time(pin_to_circuit)
+except KeyboardInterrupt:
+        pass
+finally:
+        GPIO.cleanup()
