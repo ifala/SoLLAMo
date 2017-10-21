@@ -2,7 +2,7 @@
 import RPi.GPIO as GPIO
 import time
 from sensor.distance import ultrasonic_distance_sensor_high_dx
-from sensor.photosensor import luce
+from sensor.photosensor import luce, rc_time
 
 # todo aggiungere altri 3 sensori di distanza ultrasonica
 distance = ultrasonic_distance_sensor_high_dx.measure()
