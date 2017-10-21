@@ -38,7 +38,7 @@ try:
     # Main loop
     while True:
         luce = rc_time(pin_to_circuit)
-        print(luce)
+        # print(luce)
         #print rc_time(pin_to_circuit)
 except KeyboardInterrupt:
     pass

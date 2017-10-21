@@ -51,15 +51,17 @@ GPIO.setmode(GPIO.BCM)
 
 ultrasonic_distance_sensor_high_dx = ultrasonic_distance_sensor(23, 24)
 # todo aggiungere altri 3 sensori di distanza ultrasonica
+distance = ultrasonic_distance_sensor_high_dx.measure()
 
-try:
-    while True:
-        distance = ultrasonic_distance_sensor_high_dx.measure()
-        if ultrasonic_distance_sensor_high_dx.get_is_string():
-            print (distance)
-        else:
-            print ("Distance : %.1f cm" % distance)
-        # send data to the host every 0.5 sec
-        time.sleep(0.5)
-finally:
-    GPIO.cleanup()
+#
+# try:
+#     while True:
+#         distance = ultrasonic_distance_sensor_high_dx.measure()
+#         if ultrasonic_distance_sensor_high_dx.get_is_string():
+#             print (distance)
+#         else:
+#             print ("Distance : %.1f cm" % distance)
+#         # send data to the host every 0.5 sec
+#         time.sleep(0.5)
+# finally:
+#     GPIO.cleanup()
