@@ -36,7 +36,7 @@ time.sleep(0.025)
 GPIO.output(17, GPIO.LOW)
 time.sleep(0.02)
 
-GPIO.setup(4, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 for i in range(0, 500):
     data.append(GPIO.input(17))
