@@ -1,5 +1,5 @@
 import RPi.GPIO as GPIO
-from library.dht11 import dht11
+from library.dht11 import *
 
 # initialize GPIO
 GPIO.setwarnings(False)
