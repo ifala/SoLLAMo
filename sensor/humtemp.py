@@ -13,11 +13,10 @@
 # #     print("Temperature: %d C" % result.temperature)
 # #     print("Humidity: %d %%" % result.humidity)
 # # else:
-## #     print("Error: %d" % result.error_code)
+# #     print("Error: %d" % result.error_code)
 # #
 # print("Temperature: %d C" % result.temperature)
 # print("Humidity: %d %%" % result.humidity)
-
 import RPi.GPIO as GPIO
 import time
 
@@ -32,9 +31,9 @@ GPIO.setmode(GPIO.BCM)
 
 GPIO.setup(17, GPIO.OUT)
 GPIO.output(17, GPIO.HIGH)
-time.sleep(0.025)
+time.sleep(0.05)
 GPIO.output(17, GPIO.LOW)
-time.sleep(0.02)
+time.sleep(0.05)
 
 GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
@@ -76,7 +75,7 @@ try:
                 TemperatureBit = TemperatureBit + "0"
 
 except:
-    print "ERR_RANGE"
+    print "ERR_RANGE0"
     exit(0)
 
 try:
@@ -96,7 +95,7 @@ try:
         else:
             crc = crc + "0"
 except:
-    print "ERR_RANGE"
+    print "ERR_RANGE1"
     exit(0)
 
 Humidity = bin2dec(HumidityBit)
