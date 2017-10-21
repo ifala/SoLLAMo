@@ -51,8 +51,8 @@ GPIO.setmode(GPIO.BCM)
 
 
 ultrasonic_distance_sensor_high_dx = ultrasonic_distance_sensor(23, 24)
-# todo aggiungere altri 3 sensori di distanza ultrasonica
-distance = ultrasonic_distance_sensor_high_dx.measure()
+# # todo aggiungere altri 3 sensori di distanza ultrasonica
+# distance = ultrasonic_distance_sensor_high_dx.measure()
 
 #
 # try:
