@@ -5,7 +5,6 @@ class ultrasonic_distance_sensor:
     ultrasonic_trig = 0
     ultrasonic_echo = 0
     distance = 0
-    is_string = False
 
     def __init__(self, actual_ultrasonic_trig, actual_ultrasonic_echo):
         self.ultrasonic_echo = actual_ultrasonic_echo
@@ -31,19 +30,9 @@ class ultrasonic_distance_sensor:
 
         elapsed = stop-start
         self.distance = (elapsed * 34300)/2  # si suppone che la funzione di calcolo distanza sia giusta
-        self.is_string = False
-
-        if self.distance>150.0 :
-            self.distance = "Too far"
-            self.is_string = True
-
-        if self.distance>150.0 :
-            self.distance = "Too far"
 
         return self.distance
 
-    def get_is_string(self):
-        return self.is_string
 
 
 # referring to the pins by GPIO numbers
