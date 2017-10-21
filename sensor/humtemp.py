@@ -58,7 +58,7 @@ try:
                 TemperatureBit = TemperatureBit + "0"
 
 except:
-    print "ERR_RANGE"
+    print "ERR_RANGE1"
     exit(0)
 
 try:
@@ -78,7 +78,7 @@ try:
         else:
             crc = crc + "0"
 except:
-    print "ERR_RANGE"
+    print "ERR_RANGE0"
     exit(0)
 
 Humidity = bin2dec(HumidityBit)
