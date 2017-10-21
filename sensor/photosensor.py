@@ -12,7 +12,7 @@ GPIO.setmode(GPIO.BCM)
 
 #define the pin that goes to the circuit
 pin_to_circuit = 4
-luce = 0
+
 
 
 def rc_time(pin_to_circuit):
