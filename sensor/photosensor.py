@@ -8,7 +8,7 @@
 import RPi.GPIO as GPIO
 import time
 
-GPIO.setmode(GPIO.BOARD)
+GPIO.setmode(GPIO.BCM)
 
 #define the pin that goes to the circuit
 pin_to_circuit = 7
