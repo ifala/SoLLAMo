@@ -23,4 +23,4 @@ def rctime(RCpin):
         return reading
 
 while True:
-        print rctime(18)     # Read RC timing using pin #18
+    print rctime(18)     # Read RC timing using pin #18
