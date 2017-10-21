@@ -11,7 +11,7 @@ import time
 GPIO.setmode(GPIO.BCM)
 
 #define the pin that goes to the circuit
-pin_to_circuit = 7
+pin_to_circuit = 4
 luce = 0
 
 
