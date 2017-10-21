@@ -1,5 +1,5 @@
 import time
-import RPi.GPIO
+import RPi
 
 
 class DHT11Result:
