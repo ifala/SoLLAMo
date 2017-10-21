@@ -37,6 +37,9 @@ class ultrasonic_distance_sensor:
             self.distance = "Too far"
             self.is_string = True
 
+        if self.distance>150.0 :
+            self.distance = "Too far"
+
         return self.distance
 
     def get_is_string(self):
@@ -54,7 +57,6 @@ try:
         distance = ultrasonic_distance_sensor_high_dx.measure()
         if ultrasonic_distance_sensor_high_dx.get_is_string():
             print (distance)
-
         else:
             print ("Distance : %.1f cm" % distance)
         # send data to the host every 0.5 sec
