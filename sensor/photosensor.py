@@ -34,7 +34,7 @@ def rc_time(pin_to_circuit):
 
 
 
-Catch when script is interrupted, cleanup correctly
+#Catch when script is interrupted, cleanup correctly
 try:
     # Main loop
     while True:
