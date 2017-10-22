@@ -4,7 +4,7 @@ import time
 from sensor.distance import ultrasonic_distance_sensor_high_dx
 from sensor.photosensor import pin_to_circuit, rc_time
 
-# todo reset?
+# todo funziona?
 distance = ultrasonic_distance_sensor_high_dx.measure()
 
 
