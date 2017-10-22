@@ -74,7 +74,7 @@ class DHT11:
         # collect the data while unchanged found
         unchanged_count = 0
 
-        # this is used to determine where is the end of the data
+        # this is used to determine where is the end of the data?
         max_unchanged_count = 100
 
         last = -1
