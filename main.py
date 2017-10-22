@@ -15,7 +15,7 @@ try:
         print ("Distance : %.1f cm" % distance)
         #print ("Light value :  " + str(luce))
         #print (" ")
-        time.sleep(0.5)
+        time.sleep(3.5)
 finally:
     GPIO.cleanup()
     print("exiting main.py")
