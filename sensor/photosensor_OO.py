@@ -7,5 +7,5 @@ class LightSensor(FakeAnalogInput):
 
 photosensor = LightSensor(4)
 
-
+light = photosensor.read_fake_analog_value()
 
