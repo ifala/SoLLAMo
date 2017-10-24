@@ -10,24 +10,23 @@ import time
 
 GPIO.setmode(GPIO.BCM)
 
-#define the pin that goes to the circuit
+# define the pin that goes to the circuit
 pin_to_circuit = 4
 
 
-
-def rc_time(pin_to_circuit):
+def rc_time(gpio_pin):
     count = 0
 
     # Output on the pin for
-    GPIO.setup(pin_to_circuit, GPIO.OUT)
-    GPIO.output(pin_to_circuit, GPIO.LOW)
+    GPIO.setup(gpio_pin, GPIO.OUT)
+    GPIO.output(gpio_pin, GPIO.LOW)
     time.sleep(0.1)
 
     # Change the pin back to input
-    GPIO.setup(pin_to_circuit, GPIO.IN)
+    GPIO.setup(gpio_pin, GPIO.IN)
 
     # Count until the pin goes high
-    while (GPIO.input(pin_to_circuit) == GPIO.LOW):
+    while (GPIO.input(gpio_pin) == GPIO.LOW):
         count += 1
 
     return count
