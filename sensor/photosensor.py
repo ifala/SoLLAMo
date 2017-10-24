@@ -34,13 +34,13 @@ def rc_time(gpio_pin):
 
 
 #Catch when script is interrupted, cleanup correctly
-try:
-    # Main loop
-    while True:
-        luce = rc_time(pin_to_circuit)
-        # print(luce)
-        print(rc_time(pin_to_circuit))
-except KeyboardInterrupt:
-    pass
-finally:
-    GPIO.cleanup()
+# try:
+#     # Main loop
+#     while True:
+#         luce = rc_time(pin_to_circuit)
+#         # print(luce)
+#         print(rc_time(pin_to_circuit))
+# except KeyboardInterrupt:
+#     pass
+# finally:
+#     GPIO.cleanup()
