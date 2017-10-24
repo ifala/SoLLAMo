@@ -2,7 +2,7 @@
 import RPi.GPIO as GPIO
 import time
 from sensor.distance import ultrasonic_distance_sensor_high_dx
-# from sensor.photosensor_OO import photosensor
+from sensor.photosensor_OO import photosensor
 
 # from sensor.photosensor import pin_to_circuit, rc_time
 
